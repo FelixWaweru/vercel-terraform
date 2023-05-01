@@ -21,12 +21,12 @@ resource "vercel_project" "vercel-terraform" {
 }
 
 data "vercel_project_directory" "vercel-terraform" {
-  path = "C:/Users/HP/Documents/Code/GitHub/vercel-terraform"
+  path = "."
 }
 
 resource "vercel_deployment" "vercel-terraform" {
   project_id  = vercel_project.vercel-terraform.id
   files       = data.vercel_project_directory.vercel-terraform.files
-  path_prefix = "C:/Users/HP/Documents/Code/GitHub/vercel-terraform"
+  path_prefix = "."
   production  = true
 }
