@@ -12,3 +12,19 @@ terraform init
 # then
 terraform apply
 ```
+
+
+To update Terraform after changing deployment config, run:
+
+```bash
+terraform plan
+# then
+terraform apply
+```
+
+
+To build changes in the Next.js app, run:
+
+```bash
+terraform apply
+```
