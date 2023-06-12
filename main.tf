@@ -29,5 +29,5 @@ resource "vercel_deployment" "vercel-terraform" {
   files       = data.vercel_project_directory.vercel-terraform.files
   path_prefix = "."
   production  = true
-  ignore_command = "if [ "$VERCEL_GIT_COMMIT_REF" != "ignore-build" ]; then exit 1; else exit 0; fi"
+  ignore_command = "if [ '$VERCEL_GIT_COMMIT_REF' != 'ignore-build' ]; then exit 1; else exit 0; fi"
 }
